@@ -1,27 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {SafeAreaView, View} from 'react-native';
 import {ContactsProvider,} from "./src/context/contacts";
 import {SWRConfig} from "swr";
 import ContactList from "./src/components/ContactList";
 import swrConfig from "./src/fetcher/globalConfig";
-export default function App() {
-  return (
-    <View>
-      <SWRConfig value={swrConfig}>
-      <ContactsProvider>
-        <ContactList />
-      </ContactsProvider>
-      </SWRConfig>
-    </View>
-  );
-}
+import Navigation from "./src/navigation";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+	return (
+
+			<SWRConfig value={swrConfig}>
+				<ContactsProvider>
+					<Navigation />
+				</ContactsProvider>
+			</SWRConfig>
+
+	);
+}
