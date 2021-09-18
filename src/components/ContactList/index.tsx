@@ -21,7 +21,7 @@ export default function ContactList() {
 		})();
 	}, [pageNumber]);
 	const handleOnEndReached = useCallback(() => {
-			setPageNumber(() => pageNumber + 1);
+		setPageNumber(() => pageNumber + 1);
 	}, [pageNumber]);
 	// @ts-ignore
 	const handlePress = (item: ContactInformation) => navigate(Screens.ContactDetails, {item});
