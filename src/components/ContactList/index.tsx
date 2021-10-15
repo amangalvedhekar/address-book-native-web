@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState, useRef} from 'react';
-import {FlatList, Platform, SafeAreaView} from "react-native";
+import {FlatList,} from "react-native";
 import {useContactDispatcher, useContacts, getContactList} from "../../context/contacts";
 import ContactCard from "../ContactCard";
 import {useNavigation, useScrollToTop} from "@react-navigation/native";

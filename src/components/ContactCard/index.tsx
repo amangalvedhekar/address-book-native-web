@@ -1,12 +1,11 @@
 import React from "react";
-import {Image, View, Text, Pressable} from "react-native";
+import {View, Text, Pressable} from "react-native";
 
 export default function ContactCard({fName, lName, onClick,}: any) {
 	return (
 		<Pressable
 			style={
 				{
-
 					borderRadius: 20,
 					height: 90,
 					paddingVertical: 8
